@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SmartHack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>️SmartHack</h1>
+  <h2 style="color: red; font-weight: bold;" id="elipsyContainer"> Epilepsy Warning</h2>
+  <h2 style="color: red;" id="elipsyContainer2">This game may contain flashing lights, rapidly changing colors, or other visual patterns that may trigger seizures in individuals with photosensitive epilepsy. Player discretion is advised.<br><br> If you or anyone around you experiences dizziness, altered vision, eye or muscle twitches, loss of awareness, disorientation, or convulsions while playing, stop immediately and consult a doctor.<br><br> Please play in a well-lit room, avoid prolonged sessions, and take regular breaks.
+    <h4 id="h4">Encryption algorithms used in this game: Caesar, Atbash, Vigenere, Base64, Rot13, Affine <br><br> Updates Coming soon.(more puzzles)</h4>
+  </h2>
+
+  <!-- Difficulty Selection -->
+  <div id="difficultyContainer">
+    <label>Select Difficulty:</label><br><br>
+    <button class="difficulty-btn" data-level="1">Level 1</button>
+    <button class="difficulty-btn" data-level="2">Level 2</button>
+    <button class="difficulty-btn" data-level="3">Level 3</button>
+    <button class="difficulty-btn" data-level="4">Level 4</button>
+    <button class="difficulty-btn" data-level="5">Level 5</button>
+  </div>
+
+  <!-- Key Minigame Section -->
+  <div id="keyConsole" style="display: none; margin-top: 20px;">
+    <div class="code-box" id="textDump"></div>
+
+    <div id="console-input">
+      <span>&gt;</span>
+      <input id="keyGuess" type="text" autocomplete="off" placeholder="Enter password..." />
+      <button id="keySubmitBtn">Submit</button>
+    </div>
+
+    <p id="keyResult"></p>
+  </div>
+
+  <!-- Wave Interfer Puzzle Section -->
+  <div id="wavePuzzle" style="display: none;">
+    <div id="waveContainer">
+      <canvas id="waveCanvas" width="600" height="200"></canvas>
+    </div>
+
+    <div id="waveControls">
+     <div class="slider-horizontal-wrap">
+       <label for="blueAmpSlider" style="color: #00f;">Blue Amplitude</label>
+       <input type="range" id="blueAmpSlider" min="10" max="100" value="30" step="1" />
+      </div>
+
+      <div class="slider-horizontal-wrap">
+        <label for="yellowAmpSlider" style="color: #ff0;">Yellow Amplitude</label>
+        <input type="range" id="yellowAmpSlider" min="10" max="100" value="30" step="1" />
+      </div>
+
+      <div class="slider-horizontal-wrap">
+        <label for="waveSlider">Wavelength</label>
+        <input type="range" id="waveSlider" min="20" max="100" value="60" step="1" />
+      </div>
+    </div>
+
+    <p id="waveResult"></p>
+  </div>
+
+  <!-- Cipher Puzzle Game Section -->
+  <div id="gameSection" style="display: none; margin-top: 20px;">
+    <div class="code-box">
+      <strong>Encrypted:</strong>
+      <span id="ciphered">[hidden]</span>
+    </div>
+
+    <div id="console-input">
+      <span>&gt;</span>
+     <input id="guess" type="text" autocomplete="off" placeholder="Type your guess..." class="blinking-cursor" />
+      <button id="submitBtn">Submit</button>
+    </div>
+
+    <p id="result"></p>
+    <button id="showAnswerBtn">Show Answer</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
